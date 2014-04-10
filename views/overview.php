@@ -11,10 +11,12 @@ if (!defined('INIT')) die;
 // Get all locales from Australis pages list
 $locales = [];
 foreach ($pages as $page) {
-    $jsonString = $langcheckerURL . '&file=' . $page;
-    $arr = getJsonArray(cacheUrl($jsonString))[$page];
+    $jsonString = $langcheckerURL . '&file=' . $page['file'] . '&website='
+        . $page['site'];
+    $arr = getJsonArray(cacheUrl($jsonString))[$page['file']];
     foreach ($arr as $key => $val) {
         if (in_array($key, $locales)) {
+
             continue;
         }
         $locales[] = $key;
@@ -24,20 +26,21 @@ foreach ($pages as $page) {
 
 // Get status from all locales for each page
 foreach ($pages as $page) {
-    $jsonString = $langcheckerURL . '&file=' . $page;
-    $arr = getJsonArray(cacheUrl($jsonString))[$page];
+    $jsonString = $langcheckerURL . '&file=' . $page['file'] . '&website='
+        . $page['site'];
+    $arr = getJsonArray(cacheUrl($jsonString))[$page['file']];
     foreach ($locales as $locale) {
         if (in_array($locale, array_keys($arr))) {
-            $status[$locale][$page] = $arr[$locale];
+            $status[$locale][$page['file']] = $arr[$locale];
             continue;
         }
-        $status[$locale][$page] = 'none';
+        $status[$locale][$page['file']] = 'none';
     }
 }
 
 // Display columns name
 foreach ($pages as $page) {
-    echo '<td>' . $page . '</td>';
+    echo '<td>' . $page['file'] . '</td>';
 }
 ?>
 
