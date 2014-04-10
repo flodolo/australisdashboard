@@ -35,7 +35,7 @@ foreach ($pages as $page) {
     }
 }
 
-//$status['zztop']['firefox/desktop/customize.lang'] = ['Identical' => '3', 'Missing' => '2', 'Translated' => '1'];
+// Display columns name
 foreach ($pages as $page) {
     echo '<td>' . $page . '</td>';
 }
@@ -89,6 +89,7 @@ foreach ($status as $localeStatus => $statusVal) {
     }
 }
 
+// Display bottom statistics
 $percentLocaleDone = round($localeDone / $totalLocale * 100, 2);
 $totalCol = $totalPage + 1;
 echo '<tr><td colspan="' . $totalCol. '">' . $localeDone . ' perfect locales /'
