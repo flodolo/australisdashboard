@@ -1,0 +1,102 @@
+.base table {
+    border-collapse: separate;
+    border: 1px solid lightgray;
+
+}
+
+.base td,
+.base th {
+    border-right: 1px solid lightgray;
+    padding: 2px 0.5em;
+}
+
+.base td:last-child,
+.base th:last-child {
+    border-right: 0;
+}
+
+.base td {
+    text-align:right;
+}
+
+.sand th,
+.base th {
+    text-align:center;
+}
+
+.sand .table th,
+.sand .table td {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.base caption {
+    font-size: 160%;
+    margin: 1em 0 0.5em 0;
+    text-align:center;
+}
+.sand caption {
+    font-size: 160%;
+    margin: 1em 0 1.5em 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+table.floatL {
+    float: left;
+    margin: 0 0 5px 5px;
+}
+
+table.floatL td {
+    border-bottom: 1px solid lightgray;
+}
+
+table.floatL tr:last-child td {
+    border-bottom: 0;
+}
+
+.automated {
+    background-color:#F6F4EC;
+}
+
+.missing {
+    background-color: #FF5252;
+    color: #FF5252;
+}
+
+.inprogress {
+    background-color: #FFBD52;
+    color: #FFBD52;
+}
+
+.bonus {
+    background-color: #52ADDE;
+    color: #52ADDE;
+}
+
+.done {
+    background-color: #92CC6E;
+    color: #92CC6E;
+}
+
+.shipped {
+    background-color: purple;
+    color: white;
+}
+
+.showCell {
+    color: black;
+}
+
+.owner {
+    background-color: #D7D3C8;
+    text-align: center;
+}
+
+.externallinks {
+    background-color: #E6E1D5;
+    text-align: center;
+}
+
+.externallinks th {
+    border-right: 0;
+}
