@@ -2,8 +2,7 @@
 if (!defined('INIT')) die;
 
 // Fetch external data source
-$langcheckerProd        = 'http://l10n.mozilla-community.org/~pascalc/langchecker/';
-$langchecker        = 'http://localhost:8080/';
+$langchecker        = 'http://l10n.mozilla-community.org/~pascalc/langchecker/';
 
 $langcheckerURL = $langchecker . '?locale=all&website=0&json';
 
@@ -14,5 +13,5 @@ $pages = [
     'firefox/desktop/trust.lang',
     'firefox/desktop/customize.lang',
     'firefox/australis/firefox_tour.lang',
-
+    'firefox/sync.lang',
     ];
